@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ytube-music-player"
+version = "0.1.0"
+description = ""
+authors = ["lhy <dev@lhy.kr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+homeassistant = "^2024.9.1"
+requests = "^2.32.3"
+pytubefix = "^6.16.1"
+ytmusicapi = "^1.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
