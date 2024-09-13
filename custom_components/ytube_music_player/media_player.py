@@ -706,7 +706,7 @@ class yTubeMusicComponent(MediaPlayerEntity):
 		embed_html = await self.hass.async_add_executor_job(request.get, embed_url)
 		js_url = extract.js_url(embed_html)
 		self._js = await self.hass.async_add_executor_job(request.get, js_url)
-		self._cipher = pytube.cipher.Cipher(js=self._js)
+		self._cipher = pytube.cipher.Cipher(js=self._js, js_url=js_url)
 		# this is why we need pytube as include
 		self.log_me('debug', "[E] async_get_cipher")
 
